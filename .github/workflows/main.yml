@@ -32,8 +32,7 @@ jobs:
 
     - name: Run Tests or Start FastAPI
       run: |
-        # Example: you can run tests here if you have any
-        # pytest tests/
-
-        # Or just start FastAPI app for testing purpose
-        uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+        uvicorn main:app --host 0.0.0.0 --port 8000 --reload &
+        SERVER_PID=$!
+        sleep 30
+        kill $SERVER_PID
