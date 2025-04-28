@@ -16,7 +16,7 @@ model =None
 tokenizer =None
 
 
-ckpt_dir = os.path.join('.','checkpoint')
+ckpt_dir = os.path.join('.','checkpoints2')
 
 
 #same mapping used wilhe training
